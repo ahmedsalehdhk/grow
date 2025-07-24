@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className='flex md:flex-[1.5] lg:flex-[1] md:flex-col justify-between px-5 py-6 md:py-12 bg-white shadow-md md:shadow-lg'>
       <div className="header flex flex-col justify-center">
-        <div className={`${bebasNueu.className} text-2xl md:text-4xl tracking-widest cursor-pointer md:mb-10`}>GROW</div>
+        <div className={`${bebasNueu.className} text-2xl md:text-4xl tracking-widest cursor-pointer md:mb-10`}>Grow</div>
         <ul className="nav-links hidden w-full md:flex flex-col gap-2">
           <Link href='/home'><li className='nav-link-items group'><House size={24} />Home</li></Link>
           <Link href='/quests'><li className='nav-link-items group'><ShoppingBag size={24} />Quests</li></Link>

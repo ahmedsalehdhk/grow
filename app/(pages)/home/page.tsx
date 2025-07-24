@@ -26,7 +26,7 @@ const Home = () => {
             <Image src={goku} alt="goku" className="w-64 self-center" />
             <ul className="stats flex gap-3">
               <div className="col-1 flex-1 space-y-1">
-                <SkillStat type="Discipline" exp={10} />
+                <SkillStat type="Discipline" exp={0} />
                 <SkillStat type="Fitness" exp={0} />
                 <SkillStat type="Satisfaction" exp={0} />
               </div>
