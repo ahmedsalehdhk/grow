@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
+  // output   = "../lib/generated/prisma"
 }
 
 datasource db {
@@ -21,7 +21,7 @@ model Quest {
   title      String
   category   QuestCategory   @default(MISCELLANEOUS)
   difficulty QuestDifficulty @default(SIMPLE)
-  repeat     QuestRepeat     @default(NONE)
+  repeat     QuestRepeat     @default(NEVER)
   createdAt  DateTime        @default(now())
   updatedAt  DateTime        @updatedAt
   status     QuestStatus     @default(PENDING)
@@ -56,7 +56,7 @@ enum QuestStatus {
 }
 
 enum QuestRepeat {
-  NONE
+  NEVER
   DAILY
   WEEKLY
   MONTHLY
