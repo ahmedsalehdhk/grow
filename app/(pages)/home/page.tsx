@@ -21,7 +21,7 @@ const Home = () => {
               <h1 className="text-2xl">Goku</h1>
               <h2 className="px-2 py-0.5 text-sm rounded-sm bg-black text-white">Lvl 95</h2>
             </div>
-            <p className="description text-neutral-400 text-sm mb-3">A marketing and sales executive at Alliance Properties Ltd</p>
+            <p className="description text-neutral-400 text-sm mb-3">Marketing and sales executive at Alliance Properties Ltd</p>
             <hr className="border-neutral-200" />
             <Image src={goku} alt="goku" className="w-64 self-center" />
             <ul className="stats flex gap-3">

@@ -25,7 +25,7 @@ const Quests = async () => {
     <div className='h-full flex flex-col'>
       <h1 className="text-lg md:text-2xl font-bold mb-5 md:mb-10">Quests</h1>
       <div className="quest-content-container flex flex-col md:flex-row flex-1 gap-5">
-        <div className="content-left flex-2 flex flex-wrap gap-3 order-2 md:order-1">
+        <div className="content-left flex-2 flex flex-wrap gap-5 order-2 md:order-1">
           {quests.map((quest) => (
             <QuestCard key={quest.id} id={quest.id} title={quest.title} category={quest.category} difficulty={quest.difficulty} repeat={quest.repeat} />
           ))
