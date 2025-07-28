@@ -38,7 +38,7 @@ const Home = () => {
             </ul>
           </div>
           <div className="exp-bar flex-2 rounded-lg px-10 py-6 bg-white">
-            <h1 className="font-bold mb-3">Exp remaining till next level: <span className="font-normal">{100-30}</span></h1>
+            <h1 className="mb-3">Reach level 96 in <span className="font-bold">{100-30} EXP</span></h1>
             <div className="flex items-center justify-between gap-1">
               <Progress value={100-30} className="h-7" />
             </div>

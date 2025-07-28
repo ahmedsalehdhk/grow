@@ -1,10 +1,8 @@
 import React from "react";
 import { QuestCategory, QuestDifficulty, QuestRepeat } from "@prisma/client";
+import Image from "next/image";
 
-// Components
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button"
-
+import brain from '@/public/assets/questCard/brain.png'
 type QuestCardProps = {
   id: string;
   title: string;
@@ -14,21 +12,29 @@ type QuestCardProps = {
 };
 
 const QuestCard = ({ id, title, category, difficulty, repeat }: QuestCardProps) => {
+
+  const categoryImages: Record<string, string> = {
+    LEARNING: "/assets/questCard/brain.png",
+    FITNESS: "/assets/questCard/running.png",
+    SELFCARE: "/assets/questCard/self-love.png",
+    SOCIAL: "/assets/questCard/high-five.png",
+    FINANCE: "/assets/questCard/money.png",
+    CAREER: "/assets/questCard/career-path.png",
+    CREATIVITY: "/assets/questCard/art.png",
+    PRODUCTIVITY: "/assets/questCard/productivity.png",
+    MISCELLANEOUS: "/assets/questCard/cubes.png",
+  };
+
+  const imageSrc = categoryImages[category] ?? "/assets/questCard/cubes.png";
+
   return (
-    <div className="h-96 min-h-fit w-56 rounded-lg p-2 bg-white">
-      <div className="image-container rounded-sm w-full h-40 p-1 bg-[#F3F3F3] mb-5">1</div>
-      <div className="card-content px-3">
-        <div className="header flex items-start justify-between gap-3">
-          <h1 className="font-bold text-md leading-5 capitalize">{title}</h1>
-          <Badge variant="default" className="capitalize text-xs h-fit w-fit">
-            {category.toLocaleLowerCase()}
-          </Badge>
-        </div>
-        <p>Difficulty: </p>
-        <div className="actions flex gap-1">
-          <Button variant="default" className="flex-3 w-fit">Completed</Button>
-          <Button variant="default" className="flex-1 w-fit">A</Button>
-        </div>
+    <div className="flex flex-col justify-between rounded-lg h-72 w-56 px-5 py-8 bg-white">
+      <div className="content-top">
+        <Image height={32} width={32} src={imageSrc} alt={category} />
+      </div>
+      <div className="content-bottom">
+        <p className="capitalize">{repeat.toLocaleLowerCase()}</p>
+        <h1 className="font-bold text-xl">{title}</h1>
       </div>
     </div>
   );
